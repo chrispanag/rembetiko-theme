@@ -1,0 +1,12 @@
+@mixin rbt-surface {
+  box-sizing: border-box;
+  background-color: var(--rbt-surface);
+  border-radius: var(--d-border-radius-large);
+  box-shadow: var(--rbt-card-shadow);
+  padding: var(--space-4);
+
+  @include viewport.until(sm) {
+    border-radius: var(--d-border-radius);
+    padding: var(--space-3);
+  }
+}

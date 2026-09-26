@@ -1,2 +1,5 @@
-example_setting:
+page_gradient:
+  default: true
+
+card_surfaces:
   default: true

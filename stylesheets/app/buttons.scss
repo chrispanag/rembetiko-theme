@@ -1,0 +1,21 @@
+.btn {
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  box-shadow: 0 2px 8px -2px var(--rbt-shadow-color-hover);
+
+  .discourse-no-touch &:hover {
+    box-shadow: 0 4px 12px -2px var(--rbt-shadow-color-hover);
+  }
+}
+
+// Rectangular contexts where pills look wrong
+.reply-where-modal .btn-reply-where,
+.d-editor-button-bar .btn,
+.chat-composer .btn {
+  --d-button-border-radius: var(--d-border-radius);
+}

@@ -2,4 +2,5 @@ en:
   theme_metadata:
     description: Modern theme for the rembetiko.gr forum
     settings:
-      example_setting: A description of a setting.
+      page_gradient: Show a soft branded gradient behind the page content
+      card_surfaces: Render topic lists, topics, and pages as raised cards

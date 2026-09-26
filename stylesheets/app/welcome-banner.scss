@@ -1,0 +1,16 @@
+.welcome-banner {
+  &__title {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  &__subheader {
+    color: var(--primary-medium);
+  }
+
+  .search-input {
+    background-color: var(--rbt-surface);
+    box-shadow: var(--rbt-card-shadow);
+    border-color: var(--rbt-border);
+  }
+}

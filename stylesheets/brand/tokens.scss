@@ -1,0 +1,47 @@
+// Maps the per-scheme --rbt-* tokens (common/color_definitions.scss)
+// onto core Discourse variables.
+:root {
+  --rbt-card-shadow:
+    0 1px 2px 0 var(--rbt-shadow-color), 0 4px 14px -4px var(--rbt-shadow-color);
+  --rbt-card-shadow-hover:
+    0 2px 4px 0 var(--rbt-shadow-color),
+    0 10px 28px -6px var(--rbt-shadow-color-hover);
+
+  // Shape
+  --d-border-radius: 8px;
+  --d-border-radius-large: 16px;
+  --d-button-border-radius: 999px;
+  --d-input-border-radius: var(--d-border-radius);
+
+  // Surfaces
+  --d-content-background: var(--rbt-surface);
+  --shadow-card: var(--rbt-card-shadow);
+  --d-unread-notification-background: var(--rbt-surface-accent);
+
+  // Quotes and blockquotes (title and body share these)
+  --d-post-aside-background: var(--rbt-surface-accent);
+  --d-post-aside-border-left: 3px solid var(--tertiary);
+
+  // Links and navigation
+  --d-link-color: var(--rbt-accent-text);
+  --d-nav-color--active: var(--rbt-accent-text);
+  --d-nav-color--hover: var(--rbt-accent-text);
+  --d-nav-bg-color--active: transparent;
+  --d-nav-underline-height: 3px;
+
+  // Sidebar
+  --d-sidebar-background: transparent;
+  --d-sidebar-border-color: transparent;
+  --d-sidebar-row-height: 2.3rem;
+  --d-sidebar-highlight-background: var(--rbt-surface-accent);
+  --d-sidebar-highlight-color: var(--rbt-accent-text);
+  --d-sidebar-active-background: var(--rbt-surface-accent);
+  --d-sidebar-active-color: var(--rbt-accent-text);
+  --d-sidebar-active-suffix-color: var(--tertiary);
+
+  // Topic list
+  --title-color: var(--primary);
+  --title-color--read: var(--primary-high);
+  --d-table-border-top-height: 0px;
+  --d-topic-list-data-padding-y: var(--space-4);
+}

@@ -1,0 +1,45 @@
+.topic-post {
+  .topic-body,
+  .topic-avatar {
+    border-top-color: var(--rbt-border);
+  }
+}
+
+.cooked,
+.d-editor-preview {
+  aside.quote,
+  blockquote {
+    border-radius: var(--d-border-radius);
+    overflow: hidden;
+  }
+
+  pre code {
+    border-radius: var(--d-border-radius);
+  }
+
+  img:not(.emoji, .avatar, .site-icon) {
+    border-radius: var(--d-border-radius);
+  }
+
+  .onebox,
+  aside.onebox {
+    border-radius: var(--d-border-radius-large);
+    border-color: var(--rbt-border);
+  }
+}
+
+.timeline-container .topic-timeline .timeline-scroller-content {
+  border-inline-start-color: var(--tertiary);
+}
+
+.topic-map {
+  border-radius: var(--d-border-radius-large);
+}
+
+#reply-control {
+  box-shadow: 0 -6px 24px -8px var(--rbt-shadow-color-hover);
+
+  @include viewport.until(sm) {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.sidebar-wrapper {
+  .sidebar-sections {
+    padding-top: var(--space-2);
+  }
+
+  .sidebar-section-link-wrapper .sidebar-section-link {
+    border-radius: 999px;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+
+  .sidebar-section-header {
+    .sidebar-section-header-text {
+      font-size: var(--font-down-2);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .sidebar-footer-wrapper {
+    // The footer is sticky, so it needs a solid fill or scrolled links show
+    // through it
+    background: var(--rbt-page-bg);
+
+    // Core fades links into var(--secondary), which clashes with the page
+    .sidebar-footer-container::before {
+      display: none;
+    }
+  }
+}

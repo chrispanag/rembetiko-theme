@@ -1,13 +1,42 @@
 {
   "name": "Rembetiko",
+  "component": false,
   "authors": "Rembetiko.gr",
-  "about_url": "TODO: Put your theme's public repo or Meta topic URL here",
-  "license_url": "TODO: Put your theme's LICENSE URL here",
-  "learn_more": "TODO",
-  "theme_version": "0.0.1",
+  "about_url": "https://github.com/chrispanag/rembetiko-theme",
+  "license_url": "https://github.com/chrispanag/rembetiko-theme/blob/main/LICENSE",
+  "theme_version": "1.0.0",
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {},
   "modifiers": {},
-  "color_schemes": {}
+  "color_schemes": {
+    "Rembetiko Light": {
+      "primary": "4e4e4e",
+      "secondary": "fcfcfc",
+      "tertiary": "146296",
+      "quaternary": "e45735",
+      "header_background": "417394",
+      "header_primary": "ffffff",
+      "highlight": "ffff4d",
+      "hover": "e8f0f6",
+      "selected": "d9e7f1",
+      "danger": "e45735",
+      "success": "009900",
+      "love": "fa6c8d"
+    },
+    "Rembetiko Dark": {
+      "primary": "dddddd",
+      "secondary": "222222",
+      "tertiary": "0f82af",
+      "quaternary": "c14924",
+      "header_background": "111111",
+      "header_primary": "dddddd",
+      "highlight": "a87137",
+      "hover": "283843",
+      "selected": "1f3442",
+      "danger": "e45735",
+      "success": "1ca551",
+      "love": "fa6c8d"
+    }
+  }
 }

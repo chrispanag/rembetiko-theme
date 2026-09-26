@@ -1,0 +1,27 @@
+// Style the visible box, not .fk-d-menu, which is a transparent positioning
+// wrapper with its arrow outside it. Don't add overflow: hidden here: core
+// already clips .menu-panel and expanded select-kit bodies, the d-menu inner
+// content is the scroll container, and user/group cards extend the avatar
+// above the card on purpose.
+.menu-panel,
+.fk-d-menu__inner-content,
+.select-kit.is-expanded .select-kit-body {
+  border-radius: var(--d-border-radius-large);
+  border-color: var(--rbt-border);
+  box-shadow: var(--rbt-card-shadow-hover);
+}
+
+// Core pins card corners to var(--d-border-radius) with !important; match the
+// large radius of the d-menu box the card sits in.
+.user-card,
+.group-card {
+  --d-border-radius: var(--d-border-radius-large);
+}
+
+.d-modal__container {
+  border-radius: var(--d-border-radius-large);
+}
+
+.user-menu .tabs-list .btn {
+  border-radius: var(--d-border-radius);
+}

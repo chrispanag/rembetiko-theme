@@ -1,0 +1,20 @@
+textarea,
+.d-editor-textarea-wrapper,
+.form-kit__control-textarea {
+  border-radius: var(--d-input-border-radius);
+}
+
+.search-menu .search-input,
+.search-menu-container .search-input,
+.welcome-banner .search-input {
+  --d-input-border-radius: 999px;
+  border-radius: 999px;
+}
+
+.select-kit .select-kit-header {
+  border-radius: var(--d-input-border-radius);
+}
+
+.category-breadcrumb .select-kit .select-kit-header {
+  border-radius: 999px;
+}

@@ -1,0 +1,29 @@
+@use "sass:color";
+
+// Compiled once per color scheme, so dark-light-choose() resolves to the
+// right value for "Rembetiko Light" and "Rembetiko Dark".
+:root {
+  --rbt-page-bg: #{dark-light-choose(#eef3f7, #161819)};
+  --rbt-gradient-start: #{dark-light-choose(#d3e2ee, #1b2833)};
+  --rbt-surface: #{dark-light-choose(#fff, $secondary)};
+  --rbt-surface-accent: #{dark-light-choose(
+      color.mix($tertiary, #fff, 10%),
+      color.mix($tertiary, $secondary, 22%)
+    )};
+  --rbt-accent-text: #{dark-light-choose(
+      $tertiary,
+      color.mix($tertiary, #fff, 65%)
+    )};
+  --rbt-border: #{dark-light-choose(
+      rgba($header_background, 0.16),
+      rgba(#fff, 0.08)
+    )};
+  --rbt-shadow-color: #{dark-light-choose(
+      rgba($header_background, 0.14),
+      rgba(#000, 0.45)
+    )};
+  --rbt-shadow-color-hover: #{dark-light-choose(
+      rgba($header_background, 0.24),
+      rgba(#000, 0.6)
+    )};
+}

@@ -1,0 +1,63 @@
+body:not(.admin-interface) {
+  background-color: var(--rbt-page-bg);
+
+  // Discourse injects settings as unquote("true") / unquote("false"), and an
+  // unquoted "false" string is truthy, so compare against the string.
+  @if $page_gradient == "true" {
+    background-image: linear-gradient(
+      to bottom,
+      var(--rbt-gradient-start) 0%,
+      var(--rbt-page-bg) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 40rem;
+  }
+}
+
+body {
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@if $card_surfaces == "true" {
+  // Topic list: controls and list read as one card split in two. The list
+  // card paints after the controls, so it covers their shadow's bottom edge.
+  // Don't clip .list-controls: its select-kit dropdowns render inside it.
+  .list-controls {
+    @include rbt-surface;
+    padding-block-end: 0;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+  .list-container {
+    @include rbt-surface;
+    padding-block-start: 0;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+    margin-bottom: var(--space-8);
+
+    // Core's 100px bottom margin would leave an empty band inside the card
+    #list-area {
+      margin-bottom: 0;
+    }
+  }
+
+  // Standalone pages
+  .archetype-regular #main-outlet > .regular,
+  .archetype-private_message #main-outlet > .regular,
+  .contents.body-page,
+  .container .user-main,
+  .container.tags-index,
+  .container.badges,
+  .container.show-badge,
+  .container.group,
+  .groups-index,
+  .users-directory,
+  .search-container,
+  .reviewable-container,
+  div.edit-category {
+    @include rbt-surface;
+  }
+}

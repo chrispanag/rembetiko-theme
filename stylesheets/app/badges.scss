@@ -1,0 +1,28 @@
+// Category badges as tinted pills, colored by each category
+.topic-list,
+.topic-title,
+.search-results {
+  .badge-category__wrapper .badge-category {
+    padding: 0.2em 0.65em;
+    border-radius: 999px;
+    background-color: color-mix(
+      in srgb,
+      var(--category-badge-color) 14%,
+      transparent
+    );
+    color: var(--primary-high);
+  }
+}
+
+.discourse-tag.box {
+  border: 1px solid var(--rbt-border);
+  border-radius: 999px;
+  background-color: transparent;
+  padding: 0.15em 0.65em;
+  color: var(--primary-high);
+}
+
+.badge-notification.new-topic,
+.badge-notification.unread-posts {
+  border-radius: 999px;
+}

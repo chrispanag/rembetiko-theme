@@ -1,0 +1,53 @@
+.d-header {
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.06),
+    0 6px 20px -10px rgb(0 0 0 / 0.35);
+
+  .d-header-icons {
+    .d-icon {
+      font-size: 1.35rem;
+    }
+
+    .icon,
+    .btn-flat {
+      border-radius: var(--d-border-radius-pill, 999px);
+
+      .discourse-no-touch &:hover {
+        background-color: rgb(255 255 255 / 0.12);
+      }
+    }
+
+    .badge-notification .d-icon {
+      font-size: var(--font-down-1);
+    }
+  }
+
+  .header-sidebar-toggle button {
+    border-radius: 999px;
+
+    .discourse-no-touch &:hover {
+      background-color: rgb(255 255 255 / 0.12);
+    }
+
+    .d-icon {
+      font-size: 1.35rem;
+    }
+  }
+
+  // Custom header links ("η ρεμπετοσελίδα") and the language switcher
+  .custom-header-links a,
+  .headerLink a {
+    border-radius: 999px;
+    padding: var(--space-1) var(--space-3);
+    transition: background-color 0.15s ease;
+
+    .discourse-no-touch &:hover {
+      background-color: rgb(255 255 255 / 0.12);
+    }
+  }
+
+  .language-switcher-trigger,
+  .d-header-icons .select-kit-header {
+    border-radius: 999px;
+  }
+}
