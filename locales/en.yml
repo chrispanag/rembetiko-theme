@@ -4,4 +4,3 @@ en:
     settings:
       page_gradient: Show a soft branded gradient behind the page content
       card_surfaces: Render topic lists, topics, and pages as raised cards
-      glass_surfaces: Render cards, the sidebar, the header, and menus as frosted glass over soft brand glows (replaces the page gradient)
