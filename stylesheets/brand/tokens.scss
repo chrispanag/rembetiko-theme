@@ -18,6 +18,9 @@ body {
   --d-input-border-radius: var(--d-border-radius);
 
   // Surfaces
+  // Core draws the header and the software update prompt with this
+  --shadow-header:
+    0 1px 0 rgb(0 0 0 / 0.06), 0 6px 20px -10px rgb(0 0 0 / 0.35);
   --d-content-background: var(--rbt-surface);
   --shadow-card: var(--rbt-card-shadow);
   --d-unread-notification-background: var(--rbt-surface-accent);

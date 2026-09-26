@@ -1,16 +1,21 @@
+// Radius and padding go through custom properties so the small-screen rule
+// only changes their values, and per-card overrides (like the topic list
+// seam in page.scss) survive it.
 @mixin rbt-surface {
+  --rbt-surface-radius: var(--d-border-radius-large);
+  --rbt-surface-padding: var(--space-4);
   box-sizing: border-box;
   background-color: var(--rbt-surface);
-  border-radius: var(--d-border-radius-large);
+  border-radius: var(--rbt-surface-radius);
   box-shadow: var(--rbt-card-shadow);
-  padding: var(--space-4);
+  padding: var(--rbt-surface-padding);
 
   @if $paper_style == "true" {
     border: 1px solid var(--rbt-border);
   }
 
   @include viewport.until(sm) {
-    border-radius: var(--d-border-radius);
-    padding: var(--space-3);
+    --rbt-surface-radius: var(--d-border-radius);
+    --rbt-surface-padding: var(--space-3);
   }
 }

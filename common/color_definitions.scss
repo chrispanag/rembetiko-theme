@@ -30,9 +30,16 @@
   // Paper style (paper_style setting): warm stock, hairline edges, faint grain
   --rbt-paper-page: #{dark-light-choose(#f2eee5, #1b1a17)};
   --rbt-paper-sheet: #{dark-light-choose(#fffdf8, #24221e)};
+
+  // Keep in sync with --rbt-paper-sheet; core's fades need the rgb form
+  --rbt-paper-sheet-rgb: #{dark-light-choose("255, 253, 248", "36, 34, 30")};
   --rbt-paper-tint: #{dark-light-choose(
       rgba(#54422a, 0.07),
       rgba(#fff0dc, 0.06)
+    )};
+  --rbt-paper-tint-strong: #{dark-light-choose(
+      rgba(#54422a, 0.12),
+      rgba(#fff0dc, 0.1)
     )};
   --rbt-paper-border: #{dark-light-choose(
       rgba(#54422a, 0.13),

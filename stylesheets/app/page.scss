@@ -17,6 +17,12 @@ body:not(.admin-interface) {
   }
 }
 
+// Core paints html with var(--secondary); match the page so overscroll past
+// the top or bottom doesn't show a band
+html:not(:has(body.admin-interface)) {
+  background-color: var(--rbt-page-bg);
+}
+
 body {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,8 +33,24 @@ body {
   // Topic list: controls and list read as one card split in two. The list
   // card paints after the controls, so it covers their shadow's bottom edge.
   // Don't clip .list-controls: its select-kit dropdowns render inside it.
+  // Only join them when a list follows; core also renders .list-controls on
+  // its own (the PM tags page), and plugin outlets can sit in between.
   .list-controls {
     @include rbt-surface;
+  }
+
+  .list-container {
+    margin-bottom: var(--space-8);
+
+    @include rbt-surface;
+
+    // Core's 100px bottom margin would leave an empty band inside the card
+    #list-area {
+      margin-bottom: 0;
+    }
+  }
+
+  .list-controls:has(~ .list-container) {
     padding-block-end: 0;
     border-end-start-radius: 0;
     border-end-end-radius: 0;
@@ -38,20 +60,13 @@ body {
     }
   }
 
-  .list-container {
-    @include rbt-surface;
+  .list-controls ~ .list-container {
     padding-block-start: 0;
     border-start-start-radius: 0;
     border-start-end-radius: 0;
-    margin-bottom: var(--space-8);
 
     @if $paper_style == "true" {
       border-top: 0;
-    }
-
-    // Core's 100px bottom margin would leave an empty band inside the card
-    #list-area {
-      margin-bottom: 0;
     }
   }
 
@@ -70,7 +85,8 @@ body {
   .reviewable-container,
   .discourse-post-event-upcoming-events,
   div.edit-category {
-    @include rbt-surface;
     margin-bottom: var(--space-8);
+
+    @include rbt-surface;
   }
 }

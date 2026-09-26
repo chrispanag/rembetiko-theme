@@ -13,19 +13,24 @@
 
     // Sheets lie flat: a tight contact shadow instead of a floating one
     --rbt-card-shadow:
-      0 1px 0 var(--rbt-paper-shadow), 0 1px 3px var(--rbt-paper-shadow);
+      0 1px 0 var(--rbt-shadow-color), 0 1px 3px var(--rbt-shadow-color);
     --rbt-card-shadow-hover:
-      0 1px 0 var(--rbt-paper-shadow),
-      0 4px 12px -2px var(--rbt-paper-shadow-hover);
+      0 1px 0 var(--rbt-shadow-color),
+      0 4px 12px -2px var(--rbt-shadow-color-hover);
+    --shadow-header: 0 1px 0 var(--rbt-border);
     --d-border-radius: 4px;
     --d-border-radius-large: 6px;
 
-    // Core paints menus, the composer, and many containers with this; keep
-    // them on the same stock as the sheets
+    // Core paints menus, the composer, and many containers with this, and
+    // fades into the rgb form (the sidebar footer fade among them); keep
+    // them all on the same stock as the sheets
     --secondary: var(--rbt-paper-sheet);
+    --secondary-rgb: var(--rbt-paper-sheet-rgb);
+    --d-sidebar-footer-fade: var(--rbt-paper-sheet);
 
-    // The sidebar is a sheet too, edged with a hairline
-    --d-sidebar-background: var(--rbt-paper-sheet);
-    --d-sidebar-border-color: var(--rbt-paper-border);
+    // Warm highlights and dividers instead of the scheme's cool ones
+    --d-hover: var(--rbt-paper-tint);
+    --d-selected: var(--rbt-paper-tint-strong);
+    --content-border-color: var(--rbt-border);
   }
 }

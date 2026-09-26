@@ -11,7 +11,8 @@ branding (blue header, logo, and color palette).
 | Rembetiko Light | Same values as the current light scheme           |
 | Rembetiko Dark  | Same values as the current "skoteino" dark scheme |
 
-`hover` and `selected` are set to soft blue tints to match the new surfaces.
+`hover` and `selected` are soft blue tints for the default look; with
+`paper_style` on, the theme uses warm paper tints instead.
 
 ## Settings
 
