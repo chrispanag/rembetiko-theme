@@ -26,4 +26,34 @@
       rgba($header_background, 0.24),
       rgba(#000, 0.6)
     )};
+
+  // Glass surfaces (glass_surfaces setting)
+  --rbt-glass: #{dark-light-choose(rgba(#fff, 0.5), rgba($secondary, 0.55))};
+  --rbt-glass-strong: #{dark-light-choose(
+      rgba(#fff, 0.74),
+      rgba($secondary, 0.76)
+    )};
+  --rbt-glass-sidebar: #{dark-light-choose(
+      rgba(#fff, 0.34),
+      rgba($secondary, 0.4)
+    )};
+  --rbt-glass-header: #{rgba($header_background, 0.82)};
+  --rbt-glass-rim: #{dark-light-choose(rgba(#fff, 0.75), rgba(#fff, 0.09))};
+  --rbt-glass-highlight: #{dark-light-choose(
+      rgba(#fff, 0.95),
+      rgba(#fff, 0.07)
+    )};
+  --rbt-glow-1: #{dark-light-choose(
+      rgba($tertiary, 0.42),
+      rgba($tertiary, 0.28)
+    )};
+  --rbt-glow-2: #{dark-light-choose(
+      rgba($quaternary, 0.22),
+      rgba($quaternary, 0.14)
+    )};
+  --rbt-glow-3: #{dark-light-choose(rgba(#0f96aa, 0.3), rgba(#0f96aa, 0.14))};
+  --rbt-glow-4: #{dark-light-choose(
+      rgba($header_background, 0.3),
+      rgba($tertiary, 0.14)
+    )};
 }

@@ -15,10 +15,11 @@ branding (blue header, logo, and color palette).
 
 ## Settings
 
-| Setting         | Default | Description                                    |
-| --------------- | ------- | ---------------------------------------------- |
-| `page_gradient` | true    | Soft branded gradient behind the page content  |
-| `card_surfaces` | true    | Topic lists, topics, and pages as raised cards |
+| Setting          | Default | Description                                    |
+| ---------------- | ------- | ---------------------------------------------- |
+| `page_gradient`  | true    | Soft branded gradient behind the page content  |
+| `card_surfaces`  | true    | Topic lists, topics, and pages as raised cards |
+| `glass_surfaces` | true    | Frosted glass surfaces over soft brand glows   |
 
 ## Structure
 
