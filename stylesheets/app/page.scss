@@ -59,5 +59,6 @@ body {
   .reviewable-container,
   div.edit-category {
     @include rbt-surface;
+    margin-bottom: var(--space-8);
   }
 }

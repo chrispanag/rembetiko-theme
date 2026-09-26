@@ -58,6 +58,18 @@
   }
 }
 
+// Latest topics column on the categories page
+.latest-topic-list-item {
+  --topic-list-item-background-color: transparent;
+  --topic-list-item-background-color--visited: transparent;
+  border-bottom-color: var(--rbt-border);
+  transition: background-color 0.15s ease;
+
+  .discourse-no-touch &:hover {
+    background-color: var(--rbt-surface-accent);
+  }
+}
+
 #list-area .show-more .alert {
   border-radius: 999px;
   font-weight: 700;
