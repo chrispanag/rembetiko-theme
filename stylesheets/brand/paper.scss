@@ -1,0 +1,31 @@
+// Paper style (paper_style setting). Remaps the theme tokens onto the
+// --rbt-paper-* scheme colors (common/color_definitions.scss), so every
+// surface follows. Declared on body too, like tokens.scss.
+@if $paper_style == "true" {
+  :root,
+  body {
+    --rbt-page-bg: var(--rbt-paper-page);
+    --rbt-surface: var(--rbt-paper-sheet);
+    --rbt-surface-accent: var(--rbt-paper-tint);
+    --rbt-border: var(--rbt-paper-border);
+    --rbt-shadow-color: var(--rbt-paper-shadow);
+    --rbt-shadow-color-hover: var(--rbt-paper-shadow-hover);
+
+    // Sheets lie flat: a tight contact shadow instead of a floating one
+    --rbt-card-shadow:
+      0 1px 0 var(--rbt-paper-shadow), 0 1px 3px var(--rbt-paper-shadow);
+    --rbt-card-shadow-hover:
+      0 1px 0 var(--rbt-paper-shadow),
+      0 4px 12px -2px var(--rbt-paper-shadow-hover);
+    --d-border-radius: 4px;
+    --d-border-radius-large: 6px;
+
+    // Core paints menus, the composer, and many containers with this; keep
+    // them on the same stock as the sheets
+    --secondary: var(--rbt-paper-sheet);
+
+    // The sidebar sits on the page, not on a sheet
+    --d-sidebar-background: transparent;
+    --d-sidebar-border-color: var(--rbt-paper-border);
+  }
+}

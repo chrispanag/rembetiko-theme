@@ -5,6 +5,10 @@
   box-shadow: var(--rbt-card-shadow);
   padding: var(--space-4);
 
+  @if $paper_style == "true" {
+    border: 1px solid var(--rbt-border);
+  }
+
   @include viewport.until(sm) {
     border-radius: var(--d-border-radius);
     padding: var(--space-3);

@@ -3,3 +3,6 @@ page_gradient:
 
 card_surfaces:
   default: true
+
+paper_style:
+  default: true

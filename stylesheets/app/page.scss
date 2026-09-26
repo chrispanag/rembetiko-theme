@@ -3,7 +3,10 @@ body:not(.admin-interface) {
 
   // Discourse injects settings as unquote("true") / unquote("false"), and an
   // unquoted "false" string is truthy, so compare against the string.
-  @if $page_gradient == "true" {
+  @if $paper_style == "true" {
+    background-image: var(--rbt-paper-grain);
+    background-size: 180px 180px;
+  } @else if $page_gradient == "true" {
     background-image: linear-gradient(
       to bottom,
       var(--rbt-gradient-start) 0%,
@@ -29,6 +32,10 @@ body {
     padding-block-end: 0;
     border-end-start-radius: 0;
     border-end-end-radius: 0;
+
+    @if $paper_style == "true" {
+      border-bottom: 0;
+    }
   }
 
   .list-container {
@@ -37,6 +44,10 @@ body {
     border-start-start-radius: 0;
     border-start-end-radius: 0;
     margin-bottom: var(--space-8);
+
+    @if $paper_style == "true" {
+      border-top: 0;
+    }
 
     // Core's 100px bottom margin would leave an empty band inside the card
     #list-area {

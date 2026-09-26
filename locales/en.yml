@@ -4,3 +4,4 @@ en:
     settings:
       page_gradient: Show a soft branded gradient behind the page content
       card_surfaces: Render topic lists, topics, and pages as raised cards
+      paper_style: Warm paper look with flat sheets, hairline edges, and a faint grain (replaces the page gradient)
