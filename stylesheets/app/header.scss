@@ -35,6 +35,10 @@
   }
 
   // Custom header links ("η ρεμπετοσελίδα") and the language switcher
+  .custom-header-links {
+    margin: 0;
+  }
+
   .custom-header-links a,
   .headerLink a {
     border-radius: 999px;
@@ -52,21 +56,33 @@
   }
 }
 
-// Compatibility with discourse-full-width-component, which squeezes the logo
-// into a sidebar-width grid track and shrinks it. Size the track to the logo.
+// Compatibility with discourse-full-width-component:
+// - its logo track is sidebar-width, which shrank the logo; let it grow to fit
+// - it drops the custom header links into the extra-info area, whose default
+//   list margin made the grid row taller than the header and pushed the logo
+//   and search down; pin the row to the header height
 @include viewport.from(md) {
   body.full-width-enabled .d-header {
     > .wrap .contents {
       grid-template-columns:
-        auto
+        minmax(
+          calc(var(--d-sidebar-width) - var(--d-header-padding-x)),
+          max-content
+        )
         1fr
         minmax(0, var(--d-max-width))
         1fr
         auto;
+      grid-template-rows: minmax(0, 1fr);
+      column-gap: var(--space-4);
     }
 
     #site-logo {
       max-width: none;
+    }
+
+    .before-header-panel-outlet {
+      align-self: center;
     }
   }
 }
