@@ -23,15 +23,4 @@
       letter-spacing: 0.06em;
     }
   }
-
-  .sidebar-footer-wrapper {
-    // The footer is sticky, so it needs a solid fill or scrolled links show
-    // through it
-    background: var(--rbt-page-bg);
-
-    // Core fades links into var(--secondary), which clashes with the page
-    .sidebar-footer-container::before {
-      display: none;
-    }
-  }
 }

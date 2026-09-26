@@ -1,6 +1,10 @@
 // Maps the per-scheme --rbt-* tokens (common/color_definitions.scss)
-// onto core Discourse variables.
-:root {
+// onto core Discourse variables. Also declared on body: the refreshed
+// Foundation styles redefine some of these on
+// :where(.uc-modernize-foundation-theme), which is the body, and that would
+// otherwise win over :root through inheritance.
+:root,
+body {
   --rbt-card-shadow:
     0 1px 2px 0 var(--rbt-shadow-color), 0 4px 14px -4px var(--rbt-shadow-color);
   --rbt-card-shadow-hover:
@@ -30,8 +34,8 @@
   --d-nav-underline-height: 3px;
 
   // Sidebar
-  --d-sidebar-background: transparent;
-  --d-sidebar-border-color: transparent;
+  --d-sidebar-background: var(--rbt-surface);
+  --d-sidebar-border-color: var(--rbt-border);
   --d-sidebar-row-height: 2.3rem;
   --d-sidebar-highlight-background: var(--rbt-surface-accent);
   --d-sidebar-highlight-color: var(--rbt-accent-text);
