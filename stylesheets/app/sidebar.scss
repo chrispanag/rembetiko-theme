@@ -23,17 +23,4 @@
       letter-spacing: 0.06em;
     }
   }
-
-  // With paper the sidebar is see-through, but its footer is sticky, so give
-  // it the page fill (or scrolled links show through) and drop core's fade,
-  // which fades into var(--secondary), the sheet color
-  @if $paper_style == "true" {
-    .sidebar-footer-wrapper {
-      background: var(--rbt-page-bg);
-
-      .sidebar-footer-container::before {
-        display: none;
-      }
-    }
-  }
 }

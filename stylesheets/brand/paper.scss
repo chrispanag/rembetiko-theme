@@ -24,8 +24,8 @@
     // them on the same stock as the sheets
     --secondary: var(--rbt-paper-sheet);
 
-    // The sidebar sits on the page, not on a sheet
-    --d-sidebar-background: transparent;
+    // The sidebar is a sheet too, edged with a hairline
+    --d-sidebar-background: var(--rbt-paper-sheet);
     --d-sidebar-border-color: var(--rbt-paper-border);
   }
 }
