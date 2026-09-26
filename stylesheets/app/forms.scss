@@ -11,6 +11,13 @@ textarea,
   border-radius: 999px;
 }
 
+// Keep the text clear of the pill's rounded edge. Core zeroes the input's
+// padding with a very specific selector, so indent instead.
+.search-input--header .search-term__input,
+.welcome-banner .search-term__input {
+  text-indent: var(--space-2);
+}
+
 .select-kit .select-kit-header {
   border-radius: var(--d-input-border-radius);
 }

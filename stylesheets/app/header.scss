@@ -86,3 +86,27 @@
     }
   }
 }
+
+// The logo track is wider than the panel track, so the search, centered in
+// the middle grid area, sat right of the content column. Center it on the
+// header instead (the content column is centered on the page). Grid children
+// position against their grid area, so span the whole grid. Only from xl,
+// where it fits between the logo and the header links.
+@include viewport.from(xl) {
+  body.full-width-enabled .d-header {
+    .floating-search-input-wrapper {
+      position: absolute;
+      inset-block: 0;
+      left: 50%;
+      grid-column: 1 / -1;
+      grid-row: 1;
+      width: min(550px, 100vw - 54rem);
+      margin: 0;
+      transform: translateX(-50%);
+    }
+
+    .floating-search-input {
+      width: 100%;
+    }
+  }
+}
