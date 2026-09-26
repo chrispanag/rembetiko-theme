@@ -1,0 +1,29 @@
+// discourse-calendar's upcoming events page (FullCalendar)
+.discourse-post-event-upcoming-events .fc {
+  --fc-today-bg-color: var(--rbt-surface-accent);
+  --fc-border-color: var(--rbt-border);
+
+  // The plugin forces the active button's text to the primary button text
+  // color, but the refreshed Foundation styles give it a light gray
+  // background, which leaves the label unreadable. Match a primary button.
+  .fc-button-primary {
+    --fc-button-active-bg-color: var(--tertiary);
+    --fc-button-active-border-color: var(--tertiary);
+    --fc-button-border-color: var(--rbt-border);
+  }
+
+  .fc-button-group > .fc-button:first-child {
+    border-start-start-radius: var(--d-border-radius);
+    border-end-start-radius: var(--d-border-radius);
+  }
+
+  .fc-button-group > .fc-button:last-child {
+    border-start-end-radius: var(--d-border-radius);
+    border-end-end-radius: var(--d-border-radius);
+  }
+
+  .fc-day-today .fc-daygrid-day-number {
+    color: var(--rbt-accent-text);
+    font-weight: 700;
+  }
+}

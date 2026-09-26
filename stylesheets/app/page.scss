@@ -57,6 +57,7 @@ body {
   .users-directory,
   .search-container,
   .reviewable-container,
+  .discourse-post-event-upcoming-events,
   div.edit-category {
     @include rbt-surface;
     margin-bottom: var(--space-8);
