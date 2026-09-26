@@ -51,3 +51,22 @@
     border-radius: 999px;
   }
 }
+
+// Compatibility with discourse-full-width-component, which squeezes the logo
+// into a sidebar-width grid track and shrinks it. Size the track to the logo.
+@include viewport.from(md) {
+  body.full-width-enabled .d-header {
+    > .wrap .contents {
+      grid-template-columns:
+        auto
+        1fr
+        minmax(0, var(--d-max-width))
+        1fr
+        auto;
+    }
+
+    #site-logo {
+      max-width: none;
+    }
+  }
+}

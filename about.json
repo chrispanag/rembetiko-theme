@@ -9,6 +9,10 @@
   "maximum_discourse_version": null,
   "assets": {},
   "modifiers": {},
+  "theme_site_settings": {
+    "enable_welcome_banner": true,
+    "search_experience": "search_field"
+  },
   "color_schemes": {
     "Rembetiko Light": {
       "primary": "4e4e4e",
