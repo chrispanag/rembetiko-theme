@@ -14,6 +14,5 @@ RSpec.describe "Core features" do
   # The theme sets search_experience to search_field (about.json), so the
   # header has a search field instead of the #search-button icon that the
   # quick search example clicks.
-  it_behaves_like "having working core features",
-                  skip_examples: %i[search:quick_search]
+  it_behaves_like "having working core features", skip_examples: %i[search:quick_search]
 end
