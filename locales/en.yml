@@ -1,4 +1,6 @@
 en:
+  topic_list:
+    created_year: "since %{year}"
   theme_metadata:
     description: Modern theme for the rembetiko.gr forum
     settings:

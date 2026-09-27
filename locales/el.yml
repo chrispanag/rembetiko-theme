@@ -1,4 +1,6 @@
 el:
+  topic_list:
+    created_year: "από %{year}"
   theme_metadata:
     description: Μοντέρνο θέμα για το φόρουμ του rembetiko.gr
     settings:

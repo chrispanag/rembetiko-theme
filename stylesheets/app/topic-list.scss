@@ -34,6 +34,13 @@
     font-weight: 500;
   }
 
+  .topic-created-year {
+    margin-inline-start: 0.4em;
+    font-size: var(--font-down-2);
+    white-space: nowrap;
+    color: var(--primary-medium);
+  }
+
   .topic-excerpt {
     color: var(--primary-medium);
     line-height: var(--line-height-large);
