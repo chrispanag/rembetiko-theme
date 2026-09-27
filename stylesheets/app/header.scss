@@ -57,6 +57,8 @@
 // - it drops the custom header links into the extra-info area, whose default
 //   list margin made the grid row taller than the header and pushed the logo
 //   and search down; pin the row to the header height
+// - sharing extra-info with the search made the search cover the links on
+//   narrower screens; give the links their own track
 @include viewport.from(md) {
   body.full-width-enabled .d-header {
     > .wrap .contents {
@@ -68,7 +70,9 @@
         1fr
         minmax(0, var(--d-max-width))
         1fr
+        auto
         auto;
+      grid-template-areas: "logo lspace extra-info rspace links panel";
       grid-template-rows: minmax(0, 1fr);
       column-gap: var(--space-4);
     }
@@ -78,8 +82,16 @@
     }
 
     .before-header-panel-outlet {
+      grid-area: links;
       align-self: center;
     }
+  }
+}
+
+// Below xl the header links squeeze the search too far; collapse them
+@include viewport.between(md, xl) {
+  body.full-width-enabled .d-header .custom-header-links {
+    display: none;
   }
 }
 
