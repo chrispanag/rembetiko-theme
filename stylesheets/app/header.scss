@@ -95,6 +95,22 @@
   }
 }
 
+// Below md the search leaves the header, so the links have room again, but
+// they wrap between the logo and the icons; keep them on one smaller line,
+// and hide them once even that doesn't fit
+@include viewport.until(md) {
+  .d-header .custom-header-links a {
+    white-space: nowrap;
+    font-size: var(--font-down-1);
+  }
+}
+
+@include viewport.until(sm) {
+  .d-header .custom-header-links {
+    display: none;
+  }
+}
+
 // The logo track is wider than the panel track, so the search, centered in
 // the middle grid area, sat right of the content column. Center it on the
 // header instead (the content column is centered on the page). Grid children
